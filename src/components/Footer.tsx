@@ -31,15 +31,15 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <MapPin className="h-5 w-5 mr-2 text-accent-400" />
-                <span>123 Green Street, Eco City</span>
+                <span>Darjeeling, Siliguri, India</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-accent-400" />
-                <span>+1 234 567 8900</span>
+                <span>+91 8509785997</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-accent-400" />
-                <span>info@greenbee.org</span>
+                <span>priyattamang1998@gmail.com</span>
               </li>
             </ul>
           </div>

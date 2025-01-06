@@ -3,72 +3,59 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import TestimonialCard from './components/TestimonialCard';
 import { ArrowRight, Leaf, Hotel, Recycle } from 'lucide-react';
+import Team from './components/Team';
+
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 overflow-x-hidden">
+      {/* Navbar */}
       <Navbar />
-      
+
       {/* Hero Section */}
       <section id="home" className="relative pt-20 bg-gradient-to-b from-primary-50 to-white overflow-hidden">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      {/* Text Content */}
-      <div className="space-y-6 animate-fade-in">
-        <h1 className="text-4xl md:text-6xl font-bold text-primary-800 leading-tight">
-          Sustainable Solutions for
-          <span className="text-accent-400"> Hospitality</span>
-        </h1>
-        <p className="text-xl text-gray-600">
-          Transforming the hospitality industry through eco-friendly practices and innovative solutions.
-        </p>
-        <div className="flex gap-4">
-          <button className="bg-primary-600 text-white px-8 py-3 rounded-full hover:bg-accent-400 transition-transform transform hover:scale-105 flex items-center shadow-lg">
-            Learn More <ArrowRight className="ml-2" />
-          </button>
-          <button className="bg-gray-100 text-primary-600 px-8 py-3 rounded-full hover:bg-primary-50 transition-transform transform hover:scale-105 flex items-center shadow-lg">
-            Contact Us
-          </button>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="space-y-6 animate-fade-in">
+              <h1 className="text-4xl md:text-6xl font-bold text-primary-800 leading-tight">
+                Sustainable Solutions for
+                <span className="text-accent-400"> Hospitality</span>
+              </h1>
+              <p className="text-xl text-gray-600">
+                Transforming the hospitality industry through eco-friendly practices and innovative solutions.
+              </p>
+              <div className="flex gap-4">
+                <button className="bg-primary-600 text-white px-8 py-3 rounded-full hover:bg-accent-400 transition-transform transform hover:scale-105 flex items-center shadow-lg">
+                  Learn More <ArrowRight className="ml-2" />
+                </button>
+                <button className="bg-gray-100 text-primary-600 px-8 py-3 rounded-full hover:bg-primary-50 transition-transform transform hover:scale-105 flex items-center shadow-lg">
+                  Contact Us
+                </button>
+              </div>
+            </div>
+            {/* Image Content with Slogan */}
+            <div className="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80"
+                alt="Sustainable Hotel"
+                className="rounded-lg shadow-2xl transform transition-transform hover:scale-105 duration-500 w-full object-cover"
+              />
+              {/* Slogan Overlay */}
+              <div className="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center">
+                <div className="text-center px-6">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white">
+                    "Empowering a Greener Future"
+                  </h2>
+                  <p className="text-lg md:text-xl text-white mt-2">
+                    Together, let's build a sustainable tomorrow.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      {/* Image Content */}
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent rounded-lg shadow-lg"></div>
-        <img
-          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80"
-          alt="Sustainable Hotel"
-          className="rounded-lg shadow-2xl transform transition-transform hover:scale-105 duration-500"
-        />
-        <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-accent-400/20 rounded-full blur-3xl"></div>
-      </div>
-    </div>
-  </div>
-  {/* Decorative Background */}
-  <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-    <svg
-      className="absolute top-0 left-0 w-96 h-96 opacity-50"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 100 100"
-    >
-      <circle cx="50" cy="50" r="50" fill="url(#paint0_linear)" />
-      <defs>
-        <linearGradient
-          id="paint0_linear"
-          x1="50"
-          y1="0"
-          x2="50"
-          y2="100"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#86efac" />
-          <stop offset="1" stopColor="#34d399" />
-        </linearGradient>
-      </defs>
-    </svg>
-  </div>
-</section>
-
+      </section>
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gradient-to-b from-white to-primary-50 relative">
@@ -100,32 +87,25 @@ function App() {
             borderRadius: "12px",
           }}
         >
-          {/* Gradient Border */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-lg blur-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-
-          {/* Icon */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-lg blur-lg opacity-40 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
           <div className="mb-4 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-primary-100 to-primary-200 shadow-md group-hover:scale-110 transition-transform">
             {service.icon}
           </div>
-
-          {/* Title */}
-          <h3 className="text-xl font-semibold text-primary-700 mb-2 group-hover:text-primary-900 transition-colors">
+          <h3 className="text-xl font-semibold text-primary-700 mb-2 group-hover:text-primary-900 transition-colors relative z-10">
             {service.title}
           </h3>
-
-          {/* Description */}
-          <p className="text-gray-600 group-hover:text-gray-800 transition-colors">
+          <p className="text-gray-600 group-hover:text-gray-800 transition-colors relative z-10">
             {service.description}
           </p>
         </div>
       ))}
     </div>
   </div>
-
-  {/* Decorative Blob */}
-  <div className="absolute top-0 -left-16 w-96 h-96 bg-accent-400/20 rounded-full blur-3xl"></div>
-  <div className="absolute bottom-0 -right-16 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl"></div>
 </section>
+
+
+
+
 
 
       {/* Impact Section */}
@@ -177,35 +157,49 @@ function App() {
           </div>
         </div>
       </section>
+      <Team />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-primary-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-xl p-8">
-            <h2 className="text-3xl font-bold text-center text-primary-800 mb-8">Get In Touch</h2>
-            <form className="max-w-2xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-gray-700 mb-2">Name</label>
-                  <input type="text" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary-500" />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">Email</label>
-                  <input type="email" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary-500" />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="block text-gray-700 mb-2">Message</label>
-                  <textarea rows={4} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary-500"></textarea>
-                </div>
-              </div>
-              <button className="mt-6 bg-primary-600 text-white px-8 py-3 rounded-full hover:bg-accent-400 transition-colors w-full">
-                Send Message
-              </button>
-            </form>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-white rounded-2xl shadow-2xl p-8 transform transition-all hover:scale-105">
+      <h2 className="text-3xl font-bold text-center text-primary-800 mb-8">Get In Touch</h2>
+      <form className="max-w-2xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6">
+          <div>
+            <label className="block text-gray-700 mb-2">Name</label>
+            <input
+              type="text"
+              className="w-full px-6 py-3 border border-gray-300 rounded-lg shadow-md focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all duration-300"
+            />
+          </div>
+          <div>
+            <label className="block text-gray-700 mb-2">Email</label>
+            <input
+              type="email"
+              className="w-full px-6 py-3 border border-gray-300 rounded-lg shadow-md focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all duration-300"
+            />
+          </div>
+          <div className="md:col-span-2">
+            <label className="block text-gray-700 mb-2">Message</label>
+            <textarea
+              rows={4}
+              className="w-full px-6 py-3 border border-gray-300 rounded-lg shadow-md focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all duration-300"
+            ></textarea>
           </div>
         </div>
-      </section>
+        <button
+          className="mt-6 bg-primary-600 text-white px-8 py-3 rounded-full shadow-lg hover:bg-accent-400 transition-all duration-300 transform hover:scale-105"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
 
+
+      {/* Footer */}
       <Footer />
     </div>
   );
