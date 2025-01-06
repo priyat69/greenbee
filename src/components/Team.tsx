@@ -19,7 +19,12 @@ const Team = () => {
       title: "Nikhil Gurung",
       role: "COO",
       description: "Driving efficient solutions"
-    }
+    },
+    {
+      title: "Prashant Chettri",
+      role: "CFO",
+      description: "Optimizing financial strategies"
+    }    
     
   ];
 
@@ -48,8 +53,8 @@ const Team = () => {
             {items.map((item, index) => (
               <div key={index} className="w-full flex-shrink-0 p-6">
                 <div className="bg-white rounded-xl shadow-lg p-8">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
-                    <User size={48} className="text-blue-500" />
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
+                    <User size={48} className="text-green-500" />
                   </div>
                   <h3 className="text-xl font-bold text-center mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-center mb-2">{item.role}</p>
@@ -60,19 +65,20 @@ const Team = () => {
           </div>
         </div>
 
-        <button
-          onClick={prev}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100"
-        >
-          ←
-        </button>
-        
-        <button
-          onClick={next}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100"
-        >
-          →
-        </button>
+      <button
+  onClick={prev}
+  className="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-4 shadow-xl hover:bg-gray-200 hover:scale-110 transition-all duration-300 ease-in-out transform"
+>
+  <span className="text-xl font-bold text-gray-600">←</span>
+</button>
+
+<button
+  onClick={next}
+  className="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-4 shadow-xl hover:bg-gray-200 hover:scale-110 transition-all duration-300 ease-in-out transform"
+>
+  <span className="text-xl font-bold text-gray-600">→</span>
+</button>
+
 
         <div className="flex justify-center gap-2 mt-4">
           {items.map((_, index) => (
@@ -80,7 +86,7 @@ const Team = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-blue-500' : 'bg-gray-300'
+                index === currentIndex ? 'bg-green-500' : 'bg-gray-300'
               }`}
             />
           ))}

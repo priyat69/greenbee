@@ -7,6 +7,9 @@ const Navbar = () => {
 
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
+  // Close the sidebar when a link is clicked
+  const closeSidebar = () => setIsOpen(false);
+
   return (
     <nav className="bg-white shadow-lg fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,11 +63,11 @@ const Navbar = () => {
 
               {/* Links */}
               <div className="mt-6 space-y-2">
-                <a href="#home" className="block px-3 py-2 text-primary-700 hover:text-accent-400">Home</a>
-                <a href="#about" className="block px-3 py-2 text-primary-700 hover:text-accent-400">About</a>
-                <a href="#services" className="block px-3 py-2 text-primary-700 hover:text-accent-400">Services</a>
-                <a href="#impact" className="block px-3 py-2 text-primary-700 hover:text-accent-400">Impact</a>
-                <a href="#testimonials" className="block px-3 py-2 text-primary-700 hover:text-accent-400">Testimonials</a>
+                <a href="#home" className="block px-3 py-2 text-primary-700 hover:text-accent-400" onClick={closeSidebar}>Home</a>
+                <a href="#about" className="block px-3 py-2 text-primary-700 hover:text-accent-400" onClick={closeSidebar}>About</a>
+                <a href="#services" className="block px-3 py-2 text-primary-700 hover:text-accent-400" onClick={closeSidebar}>Services</a>
+                <a href="#impact" className="block px-3 py-2 text-primary-700 hover:text-accent-400" onClick={closeSidebar}>Impact</a>
+                <a href="#testimonials" className="block px-3 py-2 text-primary-700 hover:text-accent-400" onClick={closeSidebar}>Testimonials</a>
 
                 {/* Dropdown Menu */}
                 <div>
@@ -76,9 +79,9 @@ const Navbar = () => {
                   </button>
                   {dropdownOpen && (
                     <div className="ml-4 mt-2 space-y-1">
-                      <a href="#faq" className="block px-3 py-2 text-primary-600 hover:text-accent-400">FAQs</a>
-                      <a href="#support" className="block px-3 py-2 text-primary-600 hover:text-accent-400">Support</a>
-                      <a href="#blog" className="block px-3 py-2 text-primary-600 hover:text-accent-400">Blog</a>
+                      <a href="#faq" className="block px-3 py-2 text-primary-600 hover:text-accent-400" onClick={closeSidebar}>FAQs</a>
+                      <a href="#support" className="block px-3 py-2 text-primary-600 hover:text-accent-400" onClick={closeSidebar}>Support</a>
+                      <a href="#blog" className="block px-3 py-2 text-primary-600 hover:text-accent-400" onClick={closeSidebar}>Blog</a>
                     </div>
                   )}
                 </div>
@@ -86,6 +89,7 @@ const Navbar = () => {
                 <a
                   href="#contact"
                   className="block px-3 py-2 bg-primary-600 text-white rounded-full text-center mt-4"
+                  onClick={closeSidebar}
                 >
                   Get Involved
                 </a>
